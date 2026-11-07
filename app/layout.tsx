@@ -1,5 +1,6 @@
 
 import type { Metadata } from "next";
+import { Aurora } from "./components/ui/aurora";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="relative min-h-screen antialiased">
+        <Aurora />
+        <div className="relative z-10">{children}</div>
+      </body>
     </html>
   );
 }

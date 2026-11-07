@@ -1,7 +1,8 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "../components/Reveal";
+import { BackHome } from "../components/BackHome";
+import { SpendWiseCard } from "../components/SpendWiseCard";
 
 const skills = [
   "HTML",
@@ -17,37 +18,32 @@ const skills = [
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-[#F4EFE6] text-[#171717]">
+    <main className="relative min-h-screen bg-transparent text-[#171717]">
       {/* NAVIGATION */}
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-8 md:px-12">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12 md:py-8">
         <Link href="/" className="text-2xl font-black tracking-[-0.08em]">
           BASU<span className="text-[#E86B36]">.</span>
         </Link>
-
-        <Link
-          href="/"
-          className="text-sm font-medium text-[#77716A] transition-colors hover:text-[#E86B36]"
-        >
-          ← Back Home
-        </Link>
+        <BackHome />
       </nav>
 
-      <div className="mx-auto max-w-6xl px-6 pb-24 pt-12">
+      <div className="mx-auto max-w-6xl px-6 pb-12 pt-6 md:px-6 md:pb-24 md:pt-12">
+
         {/* INTRODUCTION */}
         <Reveal>
-          <section className="border-b border-[#171717]/15 pb-24">
-            <p className="mb-8 text-xs font-semibold uppercase tracking-[0.2em] text-[#E86B36]">
+          <section className="border-b border-[#171717]/15 pb-12 md:pb-24">
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#E86B36] md:mb-8">
               A LITTLE ABOUT ME
             </p>
 
-            <h1 className="text-[clamp(3.5rem,9vw,8rem)] font-semibold leading-[0.9] tracking-[-0.085em]">
+            <h1 className="text-[clamp(3.2rem,9vw,8rem)] font-semibold leading-[0.9] tracking-[-0.085em]">
               More than
               <br />
               just <span className="font-serif italic text-[#E86B36]">code.</span>
             </h1>
 
-            <div className="mt-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-              <p className="max-w-xl text-lg leading-8 text-[#77716A] md:text-xl">
+            <div className="mt-6 flex flex-col justify-between gap-4 md:mt-12 md:flex-row md:items-end md:gap-6">
+              <p className="max-w-xl text-base leading-7 text-[#77716A] md:text-xl md:leading-8">
                 I'm Basu. I enjoy exploring ideas, figuring out how things
                 work and turning them into something useful on the web.
               </p>
@@ -61,14 +57,10 @@ export default function About() {
 
         {/* JOURNEY */}
         <Reveal>
-          <section className="border-b border-[#171717]/15 py-24">
-            <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
+          <section className="border-b border-[#171717]/15 py-12 md:py-24">
+            <div className="grid gap-7 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E86B36]">
-                  01 / MY JOURNEY
-                </p>
-
-                <h2 className="mt-8 text-4xl font-semibold leading-[1.1] tracking-[-0.06em] md:text-5xl">
+                <h2 className="mt-2 text-3xl font-semibold leading-[1.1] tracking-[-0.06em] md:mt-8 md:text-5xl">
                   Started with curiosity.
                   <span className="mt-2 block font-serif italic font-normal text-[#E86B36]">
                     Still building.
@@ -76,7 +68,7 @@ export default function About() {
                 </h2>
               </div>
 
-              <div className="space-y-5 text-base leading-8 text-neutral-600">
+              <div className="space-y-4 text-sm leading-7 text-neutral-600 md:space-y-5 md:text-base md:leading-8">
                 <p>
                   I'm a Computer Science Engineering student who started
                   exploring web development out of curiosity. What began
@@ -105,37 +97,28 @@ export default function About() {
 
         {/* SKILLS */}
         <Reveal>
-          <section className="border-b border-[#171717]/15 py-24">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E86B36]">
-              02 / MY TOOLKIT
-            </p>
-
-            <div className="mt-6 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-              <h2 className="text-4xl font-semibold tracking-[-0.06em] md:text-5xl">
+          <section className="border-b border-[#171717]/15 py-12 md:py-24">
+            <div className="mt-2 flex flex-col justify-between gap-4 md:mt-6 md:flex-row md:items-end">
+              <h2 className="text-3xl font-semibold tracking-[-0.06em] md:text-5xl">
                 Things I work with.
               </h2>
-
-              <p className="max-w-sm text-sm leading-7 text-[#77716A]">
-                A growing collection of tools and technologies I've used
-                while learning and building projects.
-              </p>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-2.5 md:mt-10 md:gap-3">
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-full border border-[#171717]/15 px-5 py-3 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#E86B36] hover:text-[#E86B36]"
+                  className="rounded-full border border-[#171717]/15 px-4 py-2.5 text-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#E86B36] hover:text-[#E86B36] md:px-5 md:py-3 md:text-sm"
                 >
                   {skill}
                 </span>
               ))}
 
-              <span className="rounded-full border border-dashed border-[#E86B36]/60 px-5 py-3 text-sm text-[#77716A]">
+              <span className="rounded-full border border-dashed border-[#E86B36]/60 px-4 py-2.5 text-xs text-[#77716A] md:px-5 md:py-3 md:text-sm">
                 Python · Learning
               </span>
 
-              <span className="rounded-full border border-dashed border-[#E86B36]/60 px-5 py-3 text-sm text-[#77716A]">
+              <span className="rounded-full border border-dashed border-[#E86B36]/60 px-4 py-2.5 text-xs text-[#77716A] md:px-5 md:py-3 md:text-sm">
                 DSA · Learning
               </span>
             </div>
@@ -144,12 +127,8 @@ export default function About() {
 
         {/* SELECTED WORK */}
         <Reveal>
-          <section className="border-b border-[#171717]/15 py-24">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E86B36]">
-              03 / SELECTED WORK
-            </p>
-
-            <h2 className="mt-6 text-4xl font-semibold tracking-[-0.06em] md:text-6xl">
+          <section className="border-b border-[#171717]/15 py-12 md:py-24">
+            <h2 className="mt-2 text-3xl font-semibold tracking-[-0.06em] md:mt-6 md:text-6xl">
               Built with curiosity.
               <br />
               <span className="font-serif italic font-normal text-[#E86B36]">
@@ -158,59 +137,36 @@ export default function About() {
             </h2>
 
             {/* SPENDWISE PROJECT CARD */}
-            <div className="mt-16 overflow-hidden rounded-2xl border border-[#171717]/10 bg-[#EAE3D8]">
+            <div className="mt-8 overflow-hidden rounded-2xl border border-[#171717]/10 bg-[#EAE3D8] md:mt-16">
               {/* PROJECT HEADER */}
-              <div className="flex flex-wrap items-center justify-between gap-4 px-6 py-6 md:px-10">
+              <div className="flex flex-wrap items-center justify-between gap-4 px-5 py-5 md:px-10 md:py-6">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#E86B36]">
-                    PERSONAL PROJECT · 01
+                    PROJECT · 01
                   </p>
 
-                  <h3 className="mt-2 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">
+                  <h3 className="mt-2 text-2xl font-semibold tracking-[-0.06em] md:text-4xl">
                     SpendWise<span className="text-[#E86B36]">.</span>
                   </h3>
                 </div>
-
-                <span className="rounded-full border border-[#171717]/15 px-4 py-2 text-xs text-[#77716A]">
-                  Finance · Web Application
-                </span>
               </div>
 
-              {/* REAL DASHBOARD SCREENSHOT */}
-              <div className="mx-4 overflow-hidden rounded-xl border border-[#171717]/10 bg-white shadow-xl shadow-black/5 md:mx-10">
-                <div className="flex items-center gap-2 border-b border-[#171717]/10 bg-[#FAFAF9] px-4 py-3">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#E86B36]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#D6D3D1]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#D6D3D1]" />
-
-                  <span className="ml-3 text-xs text-[#77716A]">
-                    SpendWise · Dashboard
-                  </span>
-                </div>
-
-                <Image
-                  src="/images/spendwise-dashboard.png"
-                  alt="SpendWise personal finance dashboard"
-                  width={1648}
-                  height={930}
-                  priority
-                  className="h-auto w-full object-cover object-top transition-transform duration-700 hover:scale-[1.015]"
-                />
-              </div>
+              {/* SPENDWISE DASHBOARD */}
+              <SpendWiseCard />
 
               {/* PROJECT DESCRIPTION */}
-              <div className="px-6 py-10 md:px-10 md:py-14">
-                <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr]">
+              <div className="px-5 py-7 md:px-10 md:py-14">
+                <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:gap-12">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#E86B36]">
                       ABOUT THE PROJECT
                     </p>
 
-                    <h4 className="mt-5 text-2xl font-semibold tracking-tight md:text-3xl">
+                    <h4 className="mt-4 text-xl font-semibold tracking-tight md:mt-5 md:text-3xl">
                       A clearer picture of your money.
                     </h4>
 
-                    <div className="mt-6 space-y-5 text-base leading-8 text-[#77716A]">
+                    <div className="mt-4 space-y-4 text-sm leading-7 text-[#77716A] md:mt-6 md:space-y-5 md:text-base md:leading-8">
                       <p>
                         SpendWise is a personal finance tracking application
                         designed to make managing money simpler and more
@@ -244,7 +200,7 @@ export default function About() {
                       WHAT'S INCLUDED
                     </p>
 
-                    <ul className="mt-5 space-y-4 text-sm text-[#77716A]">
+                    <ul className="mt-4 space-y-3 text-sm text-[#77716A] md:mt-5 md:space-y-4">
                       {[
                         "Personal account authentication",
                         "Income and expense tracking",
@@ -260,12 +216,12 @@ export default function About() {
                       ))}
                     </ul>
 
-                    <div className="mt-10 border-t border-[#171717]/10 pt-6">
+                    <div className="mt-7 border-t border-[#171717]/10 pt-5 md:mt-10 md:pt-6">
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#E86B36]">
                         BUILT WITH
                       </p>
 
-                      <p className="mt-4 text-sm leading-7 text-[#77716A]">
+                      <p className="mt-3 text-sm leading-7 text-[#77716A] md:mt-4">
                         React · TypeScript · Supabase · Tailwind CSS · Vercel
                       </p>
                     </div>
@@ -273,12 +229,12 @@ export default function About() {
                 </div>
 
                 {/* PROJECT LINKS */}
-                <div className="mt-10 flex flex-wrap items-center justify-between gap-5 border-t border-[#171717]/10 pt-7">
+                <div className="mt-7 flex flex-col items-start justify-between gap-5 border-t border-[#171717]/10 pt-6 md:mt-10 md:flex-row md:items-center md:gap-5 md:pt-7">
                   <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#77716A]">
                     EXPLORE THE PROJECT
                   </p>
 
-                  <div className="flex flex-wrap gap-6 text-sm font-semibold">
+                  <div className="flex flex-wrap gap-5 text-sm font-semibold md:gap-6">
                     <a
                       href="https://spendwise-basuu.vercel.app"
                       target="_blank"
@@ -305,22 +261,18 @@ export default function About() {
 
         {/* CONTACT */}
         <Reveal>
-          <section className="py-24">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E86B36]">
-              04 / GET IN TOUCH
-            </p>
-
-            <h2 className="mt-8 text-5xl font-semibold leading-[1.05] tracking-[-0.07em] md:text-7xl">
+          <section className="py-12 md:py-24">
+            <h2 className="mt-2 text-4xl font-semibold leading-[1.05] tracking-[-0.07em] md:mt-8 md:text-7xl">
               Have something
               <br />
               in mind?
               <span className="text-[#E86B36]"> Let's talk.</span>
             </h2>
 
-            <div className="mt-10 flex flex-wrap items-center gap-8">
+            <div className="mt-7 flex flex-wrap items-center gap-5 md:mt-10 md:gap-8">
               <a
                 href="mailto:basavaraj.basuu79@gmail.com"
-                className="border-b border-[#E86B36] pb-2 text-lg font-medium no-underline transition-colors hover:text-[#E86B36]"
+                className="break-all border-b border-[#E86B36] pb-2 text-base font-medium no-underline transition-colors hover:text-[#E86B36] md:text-lg"
               >
                 basavaraj.basuu79@gmail.com ↗
               </a>
@@ -329,7 +281,7 @@ export default function About() {
                 href="https://github.com/Basu-07"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-medium transition-colors hover:text-[#E86B36]"
+                className="text-base font-medium transition-colors hover:text-[#E86B36] md:text-lg"
               >
                 GitHub ↗
               </a>
@@ -339,8 +291,7 @@ export default function About() {
 
         {/* FOOTER */}
         <footer className="flex flex-wrap justify-between gap-4 border-t border-[#171717]/15 pt-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#77716A]">
-          <span>© 2026 BASU</span>
-          <span>Made with curiosity.</span>
+          <span>©2026 - developed by BASU</span>
         </footer>
       </div>
     </main>
