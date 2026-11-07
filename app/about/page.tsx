@@ -272,8 +272,7 @@ export default function About() {
             <div className="mt-7 flex flex-wrap items-center gap-5 md:mt-10 md:gap-8">
               <a
                 href="mailto:basavaraj.basuu79@gmail.com"
-                className="break-all border-b border-[#E86B36] pb-2 text-base font-medium no-underline transition-colors hover:text-[#E86B36] md:text-lg"
-              >
+                className="text-base font-medium transition-colors hover:text-[#E86B36] md:text-lg"              >
                 basavaraj.basuu79@gmail.com ↗
               </a>
 
@@ -284,6 +283,14 @@ export default function About() {
                 className="text-base font-medium transition-colors hover:text-[#E86B36] md:text-lg"
               >
                 GitHub ↗
+              </a>
+              <a
+                href="https://www.instagram.com/basuu.7/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base font-medium transition-colors hover:text-[#E86B36] md:text-lg"
+              >
+                Instagram ↗
               </a>
             </div>
           </section>
