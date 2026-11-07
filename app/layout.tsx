@@ -1,10 +1,9 @@
-
 import type { Metadata } from "next";
 import { Aurora } from "./components/ui/aurora";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Basu | Portfolio",
+  title: "Basu | Developer Portfolio",
   description:
     "Personal portfolio of Basu, a Computer Science student and web developer.",
 };
